@@ -1,4 +1,4 @@
 *.o
 test.c
-main.c
 a.out
+output
