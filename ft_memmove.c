@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 10:25:31 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/11 10:40:50 by tbezerra         ###   ########.fr       */
+/*   Created: 2023/10/11 15:35:18 by tbezerra          #+#    #+#             */
+/*   Updated: 2023/10/11 16:23:55 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int	valor;
-	int	sinal;
-	int	i;
+	size_t	i;
+	char	*dest;
+	const char	*source;
 
-	sinal = 1;
-	valor = 0;
-	i = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if ((str[i] == 45) || (str[i] == 43))
+	dest = (char *)dst;
+	source = (const char *)src;
+	i = 1;
+	if (!dest && !source)
+		return (NULL);
+	if (source < dest)
 	{
-		if (str[i] == 45)
-			sinal = -sinal;
-		i++;
+		while (i <= len)
+		{
+			dest[len - i] = source[len - i];
+			i++;
+		}
 	}
-	while (str[i] != '\0')
+	else
 	{
-		if (str[i] >= 48 && str[i] <= 57)
-			valor = valor * 10 + (str[i] - 48);
-		else
-			break ;
-		i++;
+		ft_memcpy(dest, source, len);
 	}
-	valor = valor * sinal;
-	return (valor);
+	return (dest);
 }

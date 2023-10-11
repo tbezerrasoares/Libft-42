@@ -6,22 +6,26 @@
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 15:00:24 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/09 13:04:03 by tbezerra         ###   ########.fr       */
+/*   Updated: 2023/10/11 16:59:48 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "libft.h"
 
 int	main()
 {
 	char	c;
 	int		i;
-	char	str[] = "42Porto42";
-	char	str2[] = "42Porto ";
-	char	str3[] = "42Porto";
+	char	str[] = "porto";
+	char	str1[] = "Testelibft";
+	char	str2[] = "42Porto";
+	char	str3[] = "Porto";
 	char	str4[] = "42Porto4";
 	int		result;
+	char	*ret;
 
 	/*test ft_isalpha*/
 	/*c = 'Q';
@@ -94,12 +98,55 @@ int	main()
 		i++;
 	}*/
 
-	result = ft_strncmp(str, str2, 6);
+	/*result = ft_strncmp(str, str2, 6);
 	printf("Comparar os srt com o str2 %d\n", result);
 	result = ft_strncmp(str2, str3, 8);
 	printf("Comparar os srt2 com o str3 %d\n", result);
 	result = ft_strncmp(str2, str4, 8);
-	printf("Comparar os srt2 com o str4 %d\n", result);		
+	printf("Comparar os srt2 com o str4 %d\n", result);*/
+
+	//ft_atoi
+	//printf("ft_atoi:%i\n", ft_atoi(str3));
+	//printf("atoi: %i\n", atoi(str3));
+
+	//ft_strlcat, ft_strlcpy, ft_memcpy
+	//ft_strlcat(str2, str3, 5);
+	//strncat(str2, str3, 5);
+
+	//printf("Destination string : %s", str2);
+
+	/*ft_strchr e ft_strrchr*/
+	/*char str5[] = "GeeksforGeeks";
+	char chr = 'k';
+	char* ptr = ft_strchr(str5, chr);
+	char* ptrr = ft_strrchr(str5, chr);
+	printf("Frist occurrence of %c is %s ", chr, ptr);
+	printf("\nLast occurrence of %c is %s", chr, ptrr);*/
+
+	/*ft_memset e ft_bzero*/
+	/* char str6[50] = "GeeksForGeeks is for programming geeks."; 
+    printf("\nBefore memset(): %s\n", str6);
+	ft_memset(str6 + 13, '.', 8*sizeof(char));
+	printf("After memset():  %s\n", str6);
+	ft_bzero(str6 + 13, 8*sizeof(char));
+	printf("After bzero():  %s\n", str6); */
+
+	/* ft_memmove */
+	/* puts("str1 before memmove "); 
+	puts(str1); 
+	ft_memmove(str1, str2, sizeof(str2)); 
+	puts("\nstr1 after memmove "); 
+	puts(str1);  */
+	
+	/* ft_memchr */
+	/* c = 'P';
+	ret = ft_memchr(str, c, 7);
+	printf("String after |%c| is - |%s|\n", c, ret); */
+
+	/* ft_memcmp */
+	i = 0;
+	i = ft_memcmp(str3, str, 5);
+	printf("ft_memcmp:%i", i);
 	
 	return (0);
 }

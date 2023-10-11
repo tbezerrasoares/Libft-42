@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 10:25:31 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/11 10:40:50 by tbezerra         ###   ########.fr       */
+/*   Created: 2023/10/11 14:55:29 by tbezerra          #+#    #+#             */
+/*   Updated: 2023/10/11 15:01:04 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+void	*ft_memset(void *str, int i, size_t len)
 {
-	int	valor;
-	int	sinal;
-	int	i;
+	unsigned char	*ptr;
+	size_t			ln;
 
-	sinal = 1;
-	valor = 0;
-	i = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if ((str[i] == 45) || (str[i] == 43))
-	{
-		if (str[i] == 45)
-			sinal = -sinal;
-		i++;
-	}
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 48 && str[i] <= 57)
-			valor = valor * 10 + (str[i] - 48);
-		else
-			break ;
-		i++;
-	}
-	valor = valor * sinal;
-	return (valor);
+	ptr = (unsigned char *)str;
+	ln = 0;
+	while (ln < len)
+		ptr[ln++] = i;
+	return (ptr);
 }

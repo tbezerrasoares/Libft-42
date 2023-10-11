@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 10:25:31 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/11 10:40:50 by tbezerra         ###   ########.fr       */
+/*   Created: 2023/10/11 16:46:47 by tbezerra          #+#    #+#             */
+/*   Updated: 2023/10/11 16:58:41 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	valor;
-	int	sinal;
-	int	i;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-	sinal = 1;
-	valor = 0;
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	i = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if ((str[i] == 45) || (str[i] == 43))
+	while (i < n)
 	{
-		if (str[i] == 45)
-			sinal = -sinal;
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 48 && str[i] <= 57)
-			valor = valor * 10 + (str[i] - 48);
-		else
-			break ;
-		i++;
-	}
-	valor = valor * sinal;
-	return (valor);
+	return (0);
 }
