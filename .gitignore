@@ -2,3 +2,7 @@
 test.c
 a.out
 output
+.vscode
+obj
+src
+*.a
