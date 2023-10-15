@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 11:14:54 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/13 15:50:53 by tbezerra         ###   ########.fr       */
+/*   Created: 2023/10/15 20:50:08 by tbezerra          #+#    #+#             */
+/*   Updated: 2023/10/15 21:05:55 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t	len_src;
-	size_t	len;
-	
-	len_src = ft_strlen(src);
-	if (!dstsize)
-		return (len_src);
-	len = (len_src < dstsize - 1) ? len_src : dstsize - 1;
-	ft_memcpy(dst, src, len);
-	*(dst + len) = '\0';
-	return (len_src);
+	if (lst)
+	{
+		if (*lst)
+			new->next = *lst;
+		*lst = new;
+	}
 }

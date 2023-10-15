@@ -6,7 +6,7 @@
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 15:00:24 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/11 16:59:48 by tbezerra         ###   ########.fr       */
+/*   Updated: 2023/10/15 21:15:15 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 
 int	main()
 {
-	char	c;
-	int		i;
-	char	str[] = "porto";
+	//char	c;
+	//int		i;
+	//char	str[] = "porto";
 	char	str1[] = "Testelibft";
-	char	str2[] = "42Porto";
-	char	str3[] = "Porto";
-	char	str4[] = "42Porto4";
-	int		result;
-	char	*ret;
+	//char	str2[] = "42Porto";
+	//char	str3[] = "Porto";
+	//char	str4[] = "42Porto4";
+	//int		result;
+	//char	*ret;
 
 	/*test ft_isalpha*/
 	/*c = 'Q';
@@ -144,9 +144,51 @@ int	main()
 	printf("String after |%c| is - |%s|\n", c, ret); */
 
 	/* ft_memcmp */
-	i = 0;
+	/* i = 0;
 	i = ft_memcmp(str3, str, 5);
-	printf("ft_memcmp:%i", i);
+	printf("ft_memcmp:%i", i); */
+
+	/* ft_srtnsrt */
+/* 	char *test = ft_strnstr(str2, str3, 7);
+	if (test != NULL) {
+    	printf("Needle found at position: %zd\n", test - str2);
+    	printf("Substring: %s\n", test);
+    } else {
+    	printf("Needle not found in haystack.\n");
+    } */
+
+	/* ft_calloc */
+/* 	size_t numElements = 5;
+    size_t elementSize = sizeof(int);
+
+    // Chame a função ft_calloc para alocar memória
+    int *intArray = (int *)ft_calloc(numElements, elementSize);
+
+    if (intArray != NULL) {
+        for (size_t i = 0; i < numElements; i++) {
+            printf("intArray[%zu] = %d\n", i, intArray[i]);
+        }
+        // Libere a memória alocada
+        free(intArray);
+    } else {
+        printf("Falha na alocação de memória.\n");
+    } */
+
+	/* ft_strdup */
+/* 	char *duplicate;
+
+    // Usando ft_strdup para criar uma cópia da string original
+    duplicate = ft_strdup(str1);
+
+    if (duplicate != NULL) {
+        printf("Original: %s\n", str1);
+        printf("Duplicata: %s\n", duplicate);
+
+        // Lembre-se de liberar a memória alocada quando não for mais necessária
+        free(duplicate);
+    } else {
+        printf("Falha na alocação de memória.\n");
+    } */
 	
 	return (0);
 }
