@@ -6,13 +6,13 @@
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 10:25:31 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/11 10:40:50 by tbezerra         ###   ########.fr       */
+/*   Updated: 2023/10/16 12:46:37 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	valor;
 	int	sinal;

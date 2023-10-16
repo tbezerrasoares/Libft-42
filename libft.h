@@ -6,7 +6,7 @@
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:29:53 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/15 22:57:25 by tbezerra         ###   ########.fr       */
+/*   Updated: 2023/10/16 16:27:46 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,9 @@ void	ft_lstadd_front(t_list **, t_list *);
 void	ft_lstadd_back(t_list **, t_list *);
 int		ft_lstsize(t_list *);
 t_list	*ft_lstlast(t_list *);
+void	ft_lstdelone(t_list *, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

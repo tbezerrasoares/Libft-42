@@ -6,7 +6,7 @@
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 15:35:18 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/11 16:23:55 by tbezerra         ###   ########.fr       */
+/*   Updated: 2023/10/16 12:45:00 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	char	*dest;
+	size_t		i;
+	char		*dest;
 	const char	*source;
 
 	dest = (char *)dst;

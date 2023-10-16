@@ -6,7 +6,7 @@
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:51:16 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/04 12:52:07 by tbezerra         ###   ########.fr       */
+/*   Updated: 2023/10/16 12:41:22 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_tolower(int arg)
 {
 	if (arg >= 65 && arg <= 90)
-		arg+=32;
+		arg += 32;
 	return (arg);
 }
