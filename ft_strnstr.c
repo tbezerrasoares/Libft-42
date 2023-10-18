@@ -6,13 +6,13 @@
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 23:06:41 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/13 11:11:09 by tbezerra         ###   ########.fr       */
+/*   Updated: 2023/10/18 11:29:07 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char * s1, const char * s2, size_t len)
+char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
 	size_t	i;
 	size_t	j;

@@ -6,7 +6,7 @@
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:29:53 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/16 16:27:46 by tbezerra         ###   ########.fr       */
+/*   Updated: 2023/10/18 15:23:49 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ size_t	ft_strlcpy(char *, const char *, size_t);
 char	*ft_strrchr(const char *, int );
 char	*ft_strchr(const char *, int);
 char	*ft_strnstr(const char *, const char *, size_t);
-char	*ft_strdup(const char *);
+char	*ft_strdup(const char *s);
 void	*ft_memcpy(void *, const void *, size_t);
 void	*ft_calloc(size_t, size_t);
 void	ft_bzero(void *, size_t );
@@ -47,6 +47,17 @@ void	*ft_memset(void *, int , size_t);
 void	*ft_memmove(void *, const void *, size_t);
 void	*ft_memchr(const void *, int, size_t);
 
+/* Part 2 */
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+char	*ft_itoa(int n);
 
 /* Bonus */
 t_list	*ft_lstnew(void *);
