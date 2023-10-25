@@ -6,7 +6,7 @@
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:23:15 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/18 16:51:39 by tbezerra         ###   ########.fr       */
+/*   Updated: 2023/10/25 16:44:25 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ char	*ft_itoa(int n)
 	if (size == 0 && str[1] == '\0')
 		*(str + size) = '0';
 	else if (size == 0 && str[1] != '\0')
-		*(str + size ) = '-';
+		*(str + size) = '-';
 	return (str);
 }

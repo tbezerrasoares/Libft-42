@@ -6,13 +6,13 @@
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:01:33 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/09 13:02:09 by tbezerra         ###   ########.fr       */
+/*   Updated: 2023/10/25 16:09:21 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(char *s1, char *s2, size_t n)
 {
 	unsigned int	i;
 
