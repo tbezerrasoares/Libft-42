@@ -6,7 +6,7 @@
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 14:54:19 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/18 15:08:23 by tbezerra         ###   ########.fr       */
+/*   Updated: 2023/10/26 11:54:24 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	unsigned int	nbr;
+
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		n = -n;
+		nbr = (unsigned int)(n * -1);
 	}
-	if (n >= 10)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		n = n % 10;
-	}
-	if (n < 10)
-		ft_putchar_fd(n + '0', fd);
+	else
+		nbr = (unsigned int)n;
+	if (nbr >= 10)
+		ft_putnbr_fd(nbr / 10, fd);
+	ft_putchar_fd((char)(nbr % 10 + 48), fd);
 }
