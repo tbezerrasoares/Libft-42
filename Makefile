@@ -6,7 +6,7 @@
 #    By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/13 23:40:02 by tbezerra          #+#    #+#              #
-#    Updated: 2023/10/25 16:55:43 by tbezerra         ###   ########.fr        #
+#    Updated: 2023/10/26 09:36:01 by tbezerra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,3 +41,4 @@ clean:
 fclean: clean
 	/bin/rm -f $(NAME)
 re: fclean all bonus
+.PHONY:	all clean fclean re bonus

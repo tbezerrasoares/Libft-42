@@ -6,7 +6,7 @@
 /*   By: tbezerra <tbezerra@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:13:32 by tbezerra          #+#    #+#             */
-/*   Updated: 2023/10/18 12:39:36 by tbezerra         ###   ########.fr       */
+/*   Updated: 2023/10/26 09:37:27 by tbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int main() {
 
     if (result) {
         printf("String após a transformação: \"%s\"\n", result);
-        free(result); // Não se esqueça de liberar a memória alocada pela função ft_strmapi.
+        free(result); 
     } else {
         printf("Erro: a função ft_strmapi não pôde ser executada.\n");
     }
